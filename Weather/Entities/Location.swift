@@ -19,12 +19,11 @@ struct Location: Decodable {
     let localtime: Date
 
     enum CodingKeys: String, CodingKey {
-        case name, region, country
+        case name, region, country, localtime
         case latitude = "lat"
         case longitude = "lon"
         case tzID = "tz_id"
         case localtimeEpoch = "localtime_epoch"
-        case localtime
     }
     
 }

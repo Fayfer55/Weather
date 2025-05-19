@@ -40,6 +40,7 @@ struct Current: Decodable {
     let gustKph: Double
 
     enum CodingKeys: String, CodingKey {
+        case humidity, cloud, uv
         case lastUpdatedEpoch = "last_updated_epoch"
         case lastUpdated = "last_updated"
         case tempC = "temp_c"
@@ -54,7 +55,6 @@ struct Current: Decodable {
         case pressureIn = "pressure_in"
         case precipMm = "precip_mm"
         case precipIn = "precip_in"
-        case humidity, cloud
         case feelslikeC = "feelslike_c"
         case feelslikeF = "feelslike_f"
         case windchillC = "windchill_c"
@@ -65,7 +65,6 @@ struct Current: Decodable {
         case dewpointF = "dewpoint_f"
         case visKm = "vis_km"
         case visMiles = "vis_miles"
-        case uv
         case gustMph = "gust_mph"
         case gustKph = "gust_kph"
     }
