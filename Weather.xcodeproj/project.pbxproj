@@ -7,30 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C539B7122DDCA73500510BB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539B6FC2DDCA73500510BB9 /* AppDelegate.swift */; };
+		C539B7132DDCA73500510BB9 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539B6FE2DDCA73500510BB9 /* ErrorView.swift */; };
+		C539B7142DDCA73500510BB9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539B7012DDCA73500510BB9 /* SceneDelegate.swift */; };
+		C539B7152DDCA73500510BB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539B7022DDCA73500510BB9 /* ViewController.swift */; };
+		C539B7162DDCA73500510BB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C539B6FD2DDCA73500510BB9 /* Assets.xcassets */; };
+		C539B7182DDCA73500510BB9 /* mock_weather_data.txt in Resources */ = {isa = PBXBuildFile; fileRef = C539B7002DDCA73500510BB9 /* mock_weather_data.txt */; };
 		C5FAAC6A2DD76AC4004475E9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C5FAAC692DD76AC4004475E9 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C539B6FC2DDCA73500510BB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C539B6FD2DDCA73500510BB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C539B6FE2DDCA73500510BB9 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		C539B6FF2DDCA73500510BB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C539B7002DDCA73500510BB9 /* mock_weather_data.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = mock_weather_data.txt; sourceTree = "<group>"; };
+		C539B7012DDCA73500510BB9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C539B7022DDCA73500510BB9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C5FAAB492DD6501D004475E9 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		C5FAAB5B2DD65020004475E9 /* Exceptions for "Weather" folder in "Weather" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = C5FAAB482DD6501D004475E9 /* Weather */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		C5FAAB4B2DD6501D004475E9 /* Weather */ = {
+		C539B7222DDCA75500510BB9 /* Entities */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				C5FAAB5B2DD65020004475E9 /* Exceptions for "Weather" folder in "Weather" target */,
-			);
-			path = Weather;
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		C539B72E2DDCA75900510BB9 /* Managers */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		C539B7322DDCA75D00510BB9 /* Mocks */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		C539B7362DDCA76000510BB9 /* Protocols */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C539B7B12DDCA85200510BB9 /* Extensions */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -47,10 +67,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C539B7032DDCA73500510BB9 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				C539B7B12DDCA85200510BB9 /* Extensions */,
+				C539B7222DDCA75500510BB9 /* Entities */,
+				C539B72E2DDCA75900510BB9 /* Managers */,
+				C539B7322DDCA75D00510BB9 /* Mocks */,
+				C539B7362DDCA76000510BB9 /* Protocols */,
+				C539B7002DDCA73500510BB9 /* mock_weather_data.txt */,
+				C539B6FF2DDCA73500510BB9 /* Info.plist */,
+				C539B6FD2DDCA73500510BB9 /* Assets.xcassets */,
+				C539B6FC2DDCA73500510BB9 /* AppDelegate.swift */,
+				C539B7012DDCA73500510BB9 /* SceneDelegate.swift */,
+				C539B7022DDCA73500510BB9 /* ViewController.swift */,
+				C539B6FE2DDCA73500510BB9 /* ErrorView.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
 		C5FAAB402DD6501D004475E9 = {
 			isa = PBXGroup;
 			children = (
-				C5FAAB4B2DD6501D004475E9 /* Weather */,
+				C539B7032DDCA73500510BB9 /* Weather */,
 				C5FAAB4A2DD6501D004475E9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -79,7 +118,11 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				C5FAAB4B2DD6501D004475E9 /* Weather */,
+				C539B7222DDCA75500510BB9 /* Entities */,
+				C539B72E2DDCA75900510BB9 /* Managers */,
+				C539B7322DDCA75D00510BB9 /* Mocks */,
+				C539B7362DDCA76000510BB9 /* Protocols */,
+				C539B7B12DDCA85200510BB9 /* Extensions */,
 			);
 			name = Weather;
 			packageProductDependencies = (
@@ -130,6 +173,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C539B7162DDCA73500510BB9 /* Assets.xcassets in Resources */,
+				C539B7182DDCA73500510BB9 /* mock_weather_data.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +185,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C539B7122DDCA73500510BB9 /* AppDelegate.swift in Sources */,
+				C539B7132DDCA73500510BB9 /* ErrorView.swift in Sources */,
+				C539B7142DDCA73500510BB9 /* SceneDelegate.swift in Sources */,
+				C539B7152DDCA73500510BB9 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
