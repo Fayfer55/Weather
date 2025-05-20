@@ -1,6 +1,15 @@
 {
-  "originHash" : "4cdad746817ac9ed37e44dbe90a2ff25fc018954899b7d513e41a4bfc70f065a",
+  "originHash" : "db1feb3c13e21dedcb1cea8b6ff004afbc43c896d42d391b22666b754c1d95e6",
   "pins" : [
+    {
+      "identity" : "nuke",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kean/Nuke",
+      "state" : {
+        "revision" : "0ead44350d2737db384908569c012fe67c421e4d",
+        "version" : "12.8.0"
+      }
+    },
     {
       "identity" : "snapkit",
       "kind" : "remoteSourceControl",

@@ -13,6 +13,7 @@
 		C539B7152DDCA73500510BB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539B7022DDCA73500510BB9 /* ViewController.swift */; };
 		C539B7162DDCA73500510BB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C539B6FD2DDCA73500510BB9 /* Assets.xcassets */; };
 		C539B7182DDCA73500510BB9 /* mock_weather_data.txt in Resources */ = {isa = PBXBuildFile; fileRef = C539B7002DDCA73500510BB9 /* mock_weather_data.txt */; };
+		C539BC512DDCFD7200510BB9 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = C539BC502DDCFD7200510BB9 /* NukeUI */; };
 		C5FAAC6A2DD76AC4004475E9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C5FAAC692DD76AC4004475E9 /* SnapKit */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5FAAC6A2DD76AC4004475E9 /* SnapKit in Frameworks */,
+				C539BC512DDCFD7200510BB9 /* NukeUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +149,7 @@
 			name = Weather;
 			packageProductDependencies = (
 				C5FAAC692DD76AC4004475E9 /* SnapKit */,
+				C539BC502DDCFD7200510BB9 /* NukeUI */,
 			);
 			productName = Weather;
 			productReference = C5FAAB492DD6501D004475E9 /* Weather.app */;
@@ -177,6 +180,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				C5FAAC682DD76AC4004475E9 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				C539BC4F2DDCFD7100510BB9 /* XCRemoteSwiftPackageReference "Nuke" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C5FAAB4A2DD6501D004475E9 /* Products */;
@@ -422,6 +426,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C539BC4F2DDCFD7100510BB9 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.8.0;
+			};
+		};
 		C5FAAC682DD76AC4004475E9 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -433,6 +445,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C539BC502DDCFD7200510BB9 /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C539BC4F2DDCFD7100510BB9 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeUI;
+		};
 		C5FAAC692DD76AC4004475E9 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C5FAAC682DD76AC4004475E9 /* XCRemoteSwiftPackageReference "SnapKit" */;
