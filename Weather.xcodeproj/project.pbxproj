@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C539B7122DDCA73500510BB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539B6FC2DDCA73500510BB9 /* AppDelegate.swift */; };
-		C539B7132DDCA73500510BB9 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539B6FE2DDCA73500510BB9 /* ErrorView.swift */; };
 		C539B7142DDCA73500510BB9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539B7012DDCA73500510BB9 /* SceneDelegate.swift */; };
 		C539B7152DDCA73500510BB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539B7022DDCA73500510BB9 /* ViewController.swift */; };
 		C539B7162DDCA73500510BB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C539B6FD2DDCA73500510BB9 /* Assets.xcassets */; };
@@ -19,7 +18,6 @@
 /* Begin PBXFileReference section */
 		C539B6FC2DDCA73500510BB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C539B6FD2DDCA73500510BB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C539B6FE2DDCA73500510BB9 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		C539B6FF2DDCA73500510BB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C539B7002DDCA73500510BB9 /* mock_weather_data.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = mock_weather_data.txt; sourceTree = "<group>"; };
 		C539B7012DDCA73500510BB9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,6 +29,10 @@
 		C539BAD82DDCB9FD00510BB9 /* Exceptions for "Modules" folder in "Weather" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				CurrentWeather/CurrentWeatherModel.swift,
+				CurrentWeather/CurrentWeatherView.swift,
+				DailyForecast/DailyForecastTableCell.swift,
+				DailyForecast/DailyForecastViewController.swift,
 				HourlyForecast/HourlyForecastCollectionCell.swift,
 				HourlyForecast/HourlyForecastViewController.swift,
 			);
@@ -72,6 +74,11 @@
 			path = Modules;
 			sourceTree = "<group>";
 		};
+		C539BC882DDD004D00510BB9 /* Views */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,13 +102,13 @@
 				C539B7322DDCA75D00510BB9 /* Mocks */,
 				C539B7362DDCA76000510BB9 /* Protocols */,
 				C539BAD62DDCB9C800510BB9 /* Modules */,
+				C539BC882DDD004D00510BB9 /* Views */,
 				C539B7002DDCA73500510BB9 /* mock_weather_data.txt */,
 				C539B6FF2DDCA73500510BB9 /* Info.plist */,
 				C539B6FD2DDCA73500510BB9 /* Assets.xcassets */,
 				C539B6FC2DDCA73500510BB9 /* AppDelegate.swift */,
 				C539B7012DDCA73500510BB9 /* SceneDelegate.swift */,
 				C539B7022DDCA73500510BB9 /* ViewController.swift */,
-				C539B6FE2DDCA73500510BB9 /* ErrorView.swift */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -143,6 +150,7 @@
 				C539B7322DDCA75D00510BB9 /* Mocks */,
 				C539B7362DDCA76000510BB9 /* Protocols */,
 				C539B7B12DDCA85200510BB9 /* Extensions */,
+				C539BC882DDD004D00510BB9 /* Views */,
 			);
 			name = Weather;
 			packageProductDependencies = (
@@ -206,7 +214,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C539B7122DDCA73500510BB9 /* AppDelegate.swift in Sources */,
-				C539B7132DDCA73500510BB9 /* ErrorView.swift in Sources */,
 				C539B7142DDCA73500510BB9 /* SceneDelegate.swift in Sources */,
 				C539B7152DDCA73500510BB9 /* ViewController.swift in Sources */,
 			);
