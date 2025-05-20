@@ -17,7 +17,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: scene)
         
         let locationManager = LocationManager()
-        let forecastManager = ForecastManagerMock(decodeManager: DecodeManager())
+        let forecastManager = ForecastManager(decodeManager: DecodeManager())
         let viewController = WeatherViewController(locationManager: locationManager, forecastManager: forecastManager)
         
         window?.rootViewController = viewController
