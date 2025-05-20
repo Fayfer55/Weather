@@ -14,12 +14,14 @@ final class DailyForecastTableCell: UITableViewCell, ClassIdentifiable {
     private lazy var weekdayLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 17, weight: .semibold)
+        label.setContentHuggingPriority(.required, for: .horizontal)
         return label
     }()
     
     private lazy var conditionLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 17)
+        label.textAlignment = .center
         return label
     }()
     
@@ -27,12 +29,14 @@ final class DailyForecastTableCell: UITableViewCell, ClassIdentifiable {
         let label = UILabel()
         label.textColor = .lightGray
         label.font = .systemFont(ofSize: 17)
+        label.setContentHuggingPriority(.required, for: .horizontal)
         return label
     }()
     
     private lazy var maxTemperatureLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 17)
+        label.setContentHuggingPriority(.required, for: .horizontal)
         return label
     }()
     
