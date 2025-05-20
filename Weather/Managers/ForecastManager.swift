@@ -57,9 +57,9 @@ actor ForecastManager: ForecastNetworkInterface {
         let url: URL?
         
         if let coordinate {
-            url = URL(string: "https://api.weatherapi.com/v1/forecast.json?key=fa8b3df74d4042b9aa7135114252304&q=\(coordinate.latitude),\(coordinate.longitude)&days=4")
+            url = URL(string: "http://api.weatherapi.com/v1/forecast.json?key=fa8b3df74d4042b9aa7135114252304&q=\(coordinate.latitude),\(coordinate.longitude)&days=4")
         } else {
-            url = URL(string: "https://api.weatherapi.com/v1/forecast.json?key=fa8b3df74d4042b9aa7135114252304&q=Moscow&days=4")
+            url = URL(string: "http://api.weatherapi.com/v1/forecast.json?key=fa8b3df74d4042b9aa7135114252304&q=Moscow&days=4")
         }
         guard let url else { throw URLError(.badURL) }
         return url
