@@ -27,6 +27,17 @@
 		C5FAAB492DD6501D004475E9 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		C539BAD82DDCB9FD00510BB9 /* Exceptions for "Modules" folder in "Weather" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				HourlyForecast/HourlyForecastCollectionCell.swift,
+				HourlyForecast/HourlyForecastViewController.swift,
+			);
+			target = C5FAAB482DD6501D004475E9 /* Weather */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		C539B7222DDCA75500510BB9 /* Entities */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
@@ -53,6 +64,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		C539BAD62DDCB9C800510BB9 /* Modules */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				C539BAD82DDCB9FD00510BB9 /* Exceptions for "Modules" folder in "Weather" target */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +94,7 @@
 				C539B72E2DDCA75900510BB9 /* Managers */,
 				C539B7322DDCA75D00510BB9 /* Mocks */,
 				C539B7362DDCA76000510BB9 /* Protocols */,
+				C539BAD62DDCB9C800510BB9 /* Modules */,
 				C539B7002DDCA73500510BB9 /* mock_weather_data.txt */,
 				C539B6FF2DDCA73500510BB9 /* Info.plist */,
 				C539B6FD2DDCA73500510BB9 /* Assets.xcassets */,
