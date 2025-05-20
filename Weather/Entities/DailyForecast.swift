@@ -9,7 +9,7 @@ import Foundation
 
 struct DailyForecast: Decodable {
     
-    let date: String
+    let date: Date
     let dateEpoch: Int
     let day: Day
     let astro: Astro

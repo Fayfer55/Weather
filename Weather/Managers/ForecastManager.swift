@@ -11,7 +11,17 @@ import OSLog
 
 actor ForecastManager: ForecastNetworkInterface {
     
+    let decodeManager: DecodeManagerInterace
+    
     private let logger = Logger(subsystem: Bundle.main.bundleIdentifier ?? "Weather.app", category: "Forecast Manager")
+    
+    // MARK: - Init
+    
+    init(decodeManager: DecodeManagerInterace) {
+        self.decodeManager = decodeManager
+    }
+    
+    // MARK: - Helpers
     
     func weather(for coordinate: CLLocationCoordinate2D?) async throws -> Weather {
         let url = try configureURL(for: coordinate)
@@ -29,7 +39,7 @@ actor ForecastManager: ForecastNetworkInterface {
         
         let (data, response) = try await URLSession.shared.data(for: request)
         try handle(response: response)
-        return try encode(data: data)
+        return try decodeManager.decode(data: data)
     }
     
     private func handle(response: URLResponse) throws {
@@ -43,18 +53,13 @@ actor ForecastManager: ForecastNetworkInterface {
         }
     }
     
-    private func encode<T: Decodable>(data: Data) throws -> T {
-        let decoder = JSONDecoder()
-        return try decoder.decode(T.self, from: data)
-    }
-    
     private func configureURL(for coordinate: CLLocationCoordinate2D?) throws -> URL {
         let url: URL?
         
         if let coordinate {
-            url = URL(string: "https://api.weatherapi.com/v1/forecast.json?key=fa8b3df74d4042b9aa7135114252304&q=\(coordinate.latitude),\(coordinate.longitude)&days=3")
+            url = URL(string: "https://api.weatherapi.com/v1/forecast.json?key=fa8b3df74d4042b9aa7135114252304&q=\(coordinate.latitude),\(coordinate.longitude)&days=4")
         } else {
-            url = URL(string: "https://api.weatherapi.com/v1/forecast.json?key=fa8b3df74d4042b9aa7135114252304&q=Moscow&days=3")
+            url = URL(string: "https://api.weatherapi.com/v1/forecast.json?key=fa8b3df74d4042b9aa7135114252304&q=Moscow&days=4")
         }
         guard let url else { throw URLError(.badURL) }
         return url
